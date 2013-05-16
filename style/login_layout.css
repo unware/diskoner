@@ -1,0 +1,246 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	16;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Mobile Layout: 480px and below. */
+
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#konten {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	background-color: #F0F0F0;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #09F;
+}
+#konten1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: none;
+}
+#konten2 {
+	clear: both;
+	float: left;
+	width: 16.6666%;
+	display: block;
+	height: 80px;
+	margin-left: 41.6666%;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+#konten3 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	background-color: #0CF;
+	padding-top: 10px;
+}
+#daftar_div {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+.gridContainer {
+	width: 92.625%;
+	padding-left: 1.1875%;
+	padding-right: 1.1875%;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#konten {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	background-color: #F0F0F0;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#konten1 {
+	clear: none;
+	float: left;
+	margin-left: 2.5641%;
+	width: 100%;
+	display: none;
+}
+#konten2 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 35.8974%;
+	display: block;
+}
+#konten3 {
+	clear: none;
+	float: left;
+	margin-left: 2.5641%;
+	width: 61.5384%;
+	display: block;
+}
+#daftar_div {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	width: 88.875%;
+	max-width: 1232px;
+	padding-left: 0.5625%;
+	padding-right: 0.5625%;
+	margin: auto;
+	border: 1px solid #666;
+}
+#LayoutDiv1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#konten {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	height: 500px;
+	margin-top: 10px;
+	margin-right: auto;
+	background-color: #F0F0F0;
+}
+#footer {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	height: 50px;
+}
+#konten1 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 30.3797%;
+	display: block;
+	height: 500px;
+}
+#konten2 {
+	clear: none;
+	float: left;
+	margin-left: 1.2658%;
+	width: 30.3797%;
+	display: block;
+	height: 500px;
+}
+#konten3 {
+	clear: none;
+	float: left;
+	margin-left: 1.2658%;
+	width: 36.7088%;
+	display: block;
+	height: 490px;
+	background-color: #FFF;
+}
+#daftar_div {
+	clear: none;
+	float: left;
+	margin-left: 1.2658%;
+	width: 100%;
+	display: none;
+}
+}

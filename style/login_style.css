@@ -1,0 +1,65 @@
+@charset "utf-8";
+#konten1 h1, #konten3 h1{
+	font-weight:lighter;
+	margin-left:15px;	
+}
+form{
+	margin-left:15px;	
+}
+fieldset{
+	margin:0 0 15px 0;
+}
+fieldset label{
+	display:block;
+	margin:0 0 3px 0;
+	font-weight:bold;
+}
+fieldset input{
+	width:80%;
+	height:30px;
+	font-size:16px;
+	padding-left:5px;
+}
+fieldset button{
+	width:100px;
+	height:40px;
+}
+
+#konten2 img{
+	width:100%;
+	margin:10px auto;
+}
+#konten2 div{
+	width: 80%;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+	-moz-border-image: url(u) 0;
+}
+#konten3 span{
+	margin-bottom:20px;
+	display:block;
+}
+
+#konten3 span em{
+	margin-left:10px;
+	margin-bottom:20px;
+}
+#daftar_div p a{
+		display:block;
+		padding-top:10px;
+		padding-bottom:10px;
+		width:150px;
+		text-decoration:none;
+		color:#000;
+		margin:0 auto;
+		background-color:#0C9;
+		font-weight:bolder;
+		font-size:1.2em;
+		border-radius:50px;
+}
+#daftar_div p a.active,#daftar_div p a:active{
+	background-color:#000;
+	color:#FFF;
+}

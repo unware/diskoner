@@ -1,46 +1,600 @@
 @charset "utf-8";
-/* CSS Document */
+.arrow-left {
+	margin-right: -3px;
+	float: right;
+	margin-top: 8px;
+	width: 0;
+	height: 0;
+	border-top: 13px solid transparent;
+	border-bottom: 13px solid transparent;
+	border-right: 15px solid #000;
+	display: none;
+	z-index: 8;
+}
+.arrow-top {
+	position: relative;
+	width: 0;
+	height: 0;
+	border-top: 13px solid transparent;
+	border-bottom: 20px solid #000;
+	border-left: 13px solid transparent;
+	border-right: 13px solid transparent;
+	z-index: 8;
+}
+/* Visual Effect */
+#shadow {
+	background: url(../images/shadow.png) repeat-x;
+	z-index: 4;
+	position: absolute;
+	width: 900px;
+	height: 30px;
+	display:none;
+}
 
-#nav ul li
-{
-	width:100%;
-	height:40px;
+/* End of vis eff */
+/* Tombol Kontrol */
+.tutup {
+	background-color: #999;
+	font-size: 14pt;
+	text-height: 40px;
+	color: #F00;
+	display: block;
+	float: right;
+	width: 20px;
+	height: 20px;
+	top: 0;
+	right: 0;
+}
+/* Styling for Aktif/ Navigasi Kiri */
+#profil {
+	width: 320px;
+	height: 160px;
+	display: block;
+	position: absolute;
+}
+#nav_kiri span img {
+	margin: 3px 3px;
+	width: 93.33333333333333%;/*70px*/
+	height: auto;
+}
+#nav_kiri a img {
+	width: 93.33333333333333%;/*70px*/
+	height: auto;
+	margin: 0 2px;
+	border-radius: 100px;
+}
+#btn_nav_wrapper {
+	/* Styling lanjut pake jQuery */
+	height: 240px;
+	width: 75px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -120px 0 0 -37px;
+}
+#btn_nav_wrapper .btn_nav a {
+	width: 40px;
+	height: 40px;
+	margin: 3px auto;
+	border: 1px solid #B5B8B9;
+	border-radius: 23px;
+	background-color: #9D9FA0;
+	text-align: center;
+	display: block;
+	transition-duration: 0.1s;
+}
+#btn_nav_wrapper .btn_nav a.hover, #btn_nav_wrapper .btn_nav a:hover {
+	border: 1px solid #333;
+	transition-duration: 0.2s;
+}
+/* Overlay / Vertical Menu From Here */
+/* 1. General Need */
+#tutup_notif_wrapper {
+	text-align: right;
+	padding-right: 15px;
+	border-bottom: 1px solid #CCC;
+}
+#tutup_notif_wrapper a {
+	color: #FFF;
+	text-decoration: none;
+	position: absolute;
+	right: 5px;
+	top: 0;
+}
+#tutup_notif_wrapper a.hover, #tutup_notif_wrapper a:hover {
+	color: #F00;
+	font-weight: bolder;
+}
+#tutup_notif_wrapper h1 {
+	font: 42px/42px 'CicleFina', Arial, sans-serif;
+	letter-spacing: 0;
+	font-weight: lighter;
+	padding-bottom: 10px;
+}
+#bar_pencari_massa {
+	border: none;
+	border: 2px solid #FFF;
+	border-radius: 20px;
+	background-color: transparent;
+	clear: both;
+	color: #fff;
+	display: block;
+	font-weight: bold;
+	margin: 10px auto;
+	padding-left: 5px;
+	width: 300px;
+	height: 20px;
+}
+/* End of General Need */
+
+#notif_konten_notif {
+	border: 2px solid #CF0;
+	display: none;
+}
+/*End of Online People Style */
+.ol {
+	float: right;
+	color: #6F0;
+	margin-right: 25px;
+}
+#notif_konten_online {
+	display: none;
+}
+#online_people {
+	height: 508px;
+	overflow: auto;
+	position: relative;
+}
+#notif_konten_online ul {
+	list-style: none;
+}
+#notif_konten_online ul li a {
+	color: #333;
+	display: block;
+	height: 50px;
+	width: 320px;
+	margin: 3px auto;
+	text-decoration: none;
+	background-color: transparent;
+	color: #FFF;
+}
+#notif_konten_online ul li a.hover, #notif_konten_online ul li a:hover {
+	background-color: #333;
+	color: #fff;
+	box-shadow: 0px 3px 5px #000;
+}
+#notif_konten_online ul li img {
+	float: left;
+	width: 30px;
+	margin-right: 5px;
+	margin-left: 10px;
+	margin-top: 5px;
+	border-radius: 30px;
+	vertical-align: text-top;
+}
+#notif_konten_online ul li strong {
+	vertical-align: text-top;
+}
+.online img {
+	border: 2px solid #090;
+}
+/*End of Online People Style */
+
+/*Settings Style */
+#notif_konten_settings {
+	border: 2px solid #CF0;
+	display: none;
+}
+#notif_konten_cari {
+	position: relative;
+	height: 508px;
+	display: none;
+}
+#notif_konten_cari ul {
+	list-style: none;
+}
+#notif_konten_cari ul li a {
+	color: #333;
+	display: block;
+	height: 50px;
+	widows: 320px;
+	margin-top: 3px;
+	text-decoration: none;
+	background-color: transparent;
+	color: #FFF;
+}
+#notif_konten_cari ul li a.hover, #notif_konten_cari ul li a:hover {
+	background-color: #CCC;
+	color: #000;
+	box-shadow: 0px 3px 5px #000;
+}
+#notif_konten_cari ul li img {
+	float: left;
+	width: 30px;
+	margin-right: 5px;
+	margin-left: 10px;
+	margin-top: 5px;
+	border-radius: 30px;
+	vertical-align: text-top;
+}
+#notif_konten_cari ul li strong {
+	vertical-align: text-top;
+}
+/* End of Styling for Aktif/ Navigasi Kiri */
+
+
+
+
+
+
+/* Styling for new status */
+#kontrol_status {
+	height: 2px;
+	background-color: #8CD7D5;
+}
+#kontrol_status a.buka_status_maker {
 	display:block;
-	border-top:1px solid #999;	
+	width: 50px;
+	height: 50px;
+	background-color: #8CD7D5;
+	border-radius: 0px 0px 5px 5px;
+	right:0;
+	margin-right: 50px;
+	text-align: center;
+	font-size:2em;
+	position: absolute;
+	z-index: 7;
+	text-decoration:none;
 }
-#nav ul li img{
-	width:30px;
-	height:30px;
-	border-radius:100%;
-	border:1px solid #0C0;
-	vertical-align:middle;
-	margin-left:10px;
+#kontrol_status .buka_status_maker.hover, #kontrol_status .buka_status_maker:hover {
+	background-color: #8CD7D5;
+	opacity:1;
 }
-#nav ul li span
-{
-	color: #222;
-	padding-left:5px;
-		
-	/* Untuk Mengatasi Judul Panjang menjadi ... */
-    max-width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;	
+#kontrol_status .buka_status_maker.active, #kontrol_status .buka_status_maker:active {
+	box-shadow: 0px 2px 20px #099;
 }
-#nav .user_wrap
-{
-	margin-top:3px;
-	background-color:#CCC;
-	display:block;
-	height:34px;
-	border-radius:0px 20px 20px 0px;
+#teksarea_status {
+	background-color: rgba(255,255,255,0.5);
+	width: 360px;
+	height: auto;
+	padding: 7px;
+	margin: 5px auto;
+	margin-left: 5px;
+	float: left;
 }
-#nav .user_wrap.hover,
-#nav .user_wrap:hover
-{
-	background-color:#0C0;
-	cursor:pointer;
+#teksarea_status textarea {
+	width: 350px;
+	height: 80px;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #36F;
+	background-color: rgba(255,255,255,0.5);
+	resize: vertical;
+	overflow: hidden;
+	font-size: 1.2em;
+	font-family: "CicleFina", "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
-#konten h1{
-	font-size:40pt;	
+#teksarea_status textarea:focus {
+	background-color: rgba(255,255,255,0.8);
+}
+#bts_status_wrapper {
+	width: auto;
+	float: left;
+}
+#btn_status {
+	width: 310px;
+	height: auto;
+	margin-left: 5px;
+	float: left;
+}
+#btn_status span {
+	width: 100px;
+	height: 20px;
+	background-color: #99FFFF;
+	display: inline-block;
+	text-align: center;
+	font-size: 0.7em;
+	border-radius: 5px 5px 0px 0px;
+	cursor: pointer;
+}
+#btn_status span.active, #btn_status span:active {
+	background-color: rgba(255,255,255,0.5);
+}
+#konten_btn_status {
+	height: 65px;
+	background-color: rgba(255,255,255,0.5);
+	clear: both;
+	margin-left: 5px;
+	padding-left: 10px;
+	padding-top: 20px;
+	overflow: hidden;
+}
+#posting_status a {
+	color: #333;
+	text-decoration: none;
+	font-family: "CicleGordita", "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 1.5em;
+	width: 100px;
+	height: 40px;
+	padding-top: 10px;
+	margin-left: 50px;/*150px*/
+	margin-top: 25px;
+	background-color: #0C0;
+	text-align: center;
+	float: left;
+	transition-duration: 0.5s;
+}
+#posting_status a.hover, #posting_status a:hover {
+	color: #FFF;
+	background-color: #0C0;
+	transition-duration: 0.5s;
+}
+#tombol_dialog a {
+	display: block;
+	background-color: #0FC;
+	width: 100px;
+	height: 25px;
+	border-radius: 10px;
+	color: #333;
+	text-decoration: none;
+	text-align: center;
+	padding: 10px 10px;
+	transition-duration: 0.2s;
+}
+#tombol_dialog a.active, #tombol_dialog a:active {
+	background-color: #333;
+	color: #fff;
+	transition-duration: 0.1s;
+}
+/* Untuk tombol navigasi bawah news feed */
+#wrapper_tombol {
+	position: relative;
+	margin-left: -150px;
+	left: 50%;
+	padding-top: 5px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	width: 300px;
+}
+.btn_bawah a {
+	width: 40px;
+	height: 40px;
+	margin-left: 25px;
+	border-radius: 20px;
+	float: left;
+	text-align: center;
+	background-color: #39F;
+	color: #fff;
+	display: block;
+}
+#footer p {
+	color: #333;
+	font-size: 12px;
+	text-height:1.6;
+}
+/* End Of Untuk tombol navigasi bawah news feed */
+
+/* Style utk Foto Galeri */
+#nav_galeri {
+	width: 320px;
+	height: 650px;
+	border-right: 1px solid #fff;
+	position: absolute;
+}
+.foto_galeri ul {
+	float: left;
+	display: inline-block;
+}
+.foto_galeri ul li {
+	display: inline;
+	list-style: none;
+	margin-left: 2;
+}
+.foto_galeri ul li img {
+	width: 100px;
+	margin-left: 5px;
+}
+#konten_galeri {
+	margin-left: 321px;
+	width: 704px;
+	height: 650px;
+	border-right: 1px solid #fff;
+	position: absolute;
+}
+#lokasi_foto {
+	z-index: 2;
+	position: absolute;
+}
+#ket_foto {
+	background-color: rgba(0,102,204,0.8);
+	position: absolute;
+	width: 704px;
+	height: 80px;
+	z-index: 3;
+	display: none;
+}
+#konten span.isi_utama {
+	height: auto;
+	padding-left: 6px;
+	padding-right: 6px;
+	font: 18px/27px 'CicleGordita', Arial, sans-serif;
+	border-right: 1px solid #000;
+	width: 600px;
+	float: left;
+}
+.konten_isi_utama {
+	border-bottom: 1px dashed #666;
+	display: block;
+	transition-duration: 0.2s;
+}
+.konten_isi_utama.hover, .konten_isi_utama:hover {
+	border-bottom: 1px solid #666;
+	transition-duration: 0.5s;
+}
+#konten span.isi_utama a {
+	font: 30px/30px 'CicleFina', Arial, sans-serif;
+	letter-spacing: 0;
+	text-decoration: none;
+	color: #000;
+}
+#konten span.isi_utama h3 {
+	padding-left: 100px;
+	padding-top: 5px;
+	font: 20px/20px 'CicleFina', Arial, sans-serif;
+	letter-spacing: 0;
+}
+#konten span.isi_utama img.foto_konten {
+	padding-left: 100px;
+	padding-top: 5px;
+	width: 499px;
+	clear: both;
+}
+#konten span.isi_utama img.foto_user {
+	float: left;
+	padding-top: 5px;
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	-ms-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-webkit-border-radius: 100%;
+}
+#konten span.isi_tambahan {
+	width: 240px;
+	float: right;
+	margin-left: 10px;
+	padding-top:35px;
+	font: 16px/18px 'CicleGordita', Arial, sans-serif;
+}
+.button_status_wrapper {
+	padding-left: 100px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666;
+}
+/* Bagian Tombol Status */
+#status_maker_group ul.btn_status {
+	overflow: hidden;
+	position: relative;
+	width: 330px;
+	height: 75px;
+	margin-left: -165px;
+	left: 50%;
+}
+#status_maker_group ul.btn_status li {
+	width: 70px;
+	height: 70px;
+	float: left;
+	background-color: #6C9;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+	text-align: center;
+	color: #fff;
+}
+/* Arrow */
+
+.arrow_status_maker{
+	display:none;
+	width: 70px;
+	height: 20px;
+	float: left;
+	background:url(../images/arrow_up.png) no-repeat top;
+	margin-left: 5px; /* Posisi Awal, tamba'' 75 mabaen */
+	margin-right: 5px;
+	margin-bottom: 0px;
+	text-align: center;
+	color: #fff;
+}
+/* End of Bagian Tombol Status */
+
+/* Bagian Membuat Status */
+.inner_status_maker_wrapper {
+	overflow: hidden;
+}
+#navigasi_status {
+	padding-top: 25px;
+	width: 200px;
+	height: 300px;
+	float: left;
+}
+#navigasi_status input {
+	width: 175px;
+	height: 20px;
+	margin-left: 5px;
+	padding-left: 10px;
+	border: none;
+	border: 2px solid #FFF;
+	border-radius: 20px;
+	background-color: transparent;
+	clear: both;
+	color: #fff;
+	display: block;
+	font-weight: bold;
+}
+/* Tombol Kirim */
+#navigasi_status a {
+	display: block;
+	width: 100px;
+	padding: 10px;
+	margin: 10px auto;
+	background-color: #0C0;
+	color: #000;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 20px;
+}
+#tampil_data_status {
+	float: left;
+	width: 685px;
+	height: 345px;
+	overflow: auto;
+}
+#tampil_data_status ul.list_data_status li {
+	display: inline-block;
+	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	border: 1px solid #666;
+	border-radius: 3px;
+	cursor: pointer;
+}
+#tampil_data_status ul.list_data_status li div.data {
+	position: relative;
+}
+#tampil_data_status ul.list_data_status li div.data a span {
+	display: block;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background-color: RGBA(0,255,153,0.8);
+}
+#tampil_data_status span.deskripsi_data {
+	vertical-align: top;
+	color: #ffffff;
+	position: absolute;
+	width: 100%;
+	display: block;
+	bottom: 0;
+}
+#tampil_data_status ul.list_data_status li img {
+	width: 150px;
+	height: 150px;
+}
+#tampil_data_status ul.list_data_status li div.data a strong {
+	display: block;
+	padding: 10px 10px 0 10px;
+	color: #000;
+	font-style: normal;
+}
+#tampil_data_status ul.list_data_status li div.data a em {
+	display: block;
+	padding: 0 10px 10px 10px;
+	color: #000;
+	font-size: 9pt;
+	font-style: normal;
 }

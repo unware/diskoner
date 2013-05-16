@@ -1,59 +1,111 @@
 @charset "utf-8";
-body{
-	padding:0;
-	margin:0;
-	overflow:hidden;
-	height:auto;
-}
 /* 	Kontainer Utama Halaman Utama 
 	Untuk Tampilan Layar Desktop
 */
-/*@media only screen and (min-width: 769px) {
-*/#kontainer {
-		margin-left:100px;
-		width:1200px;
-		border:1px solid #0CF;
-		height:auto;
-		background-color:#F90;
-		overflow:hidden;
+/*@media only screen and (max-width: 768px) {
+	#nav_kiri{
+		
+		width:100%;75px
+		position:absolute;
+		background-color:RGBA(0,187,170,0.4);
+		z-index:2;
+		
 	}
 	
-	#nav{
-		top:0;
-		left:0;
-		width:100px;
-		position:absolute;
-		border:1px solid #000;
-		overflow:hidden;
-	}
-	#status_maker{
-		text-align:left;
-		width:100%;
-		height:80px;
-		border:1px solid #0CF;
-		clear:both;
-		background-image:url(../images/red_sparkling.png);
-	}
-	#header{
-		width:78.88%;
-		height:100px;
-		border:1px solid #000;
-		float:right;
-		
-	}
-	#konten{
-		width:78.88%;
-		height:420px;
-		float:right;
-		overflow:hidden;
-		
-	}
-	#footer{
-		width:78.88%;
-		min-height:100px;
-		border:1px solid #000;
-		float:right;
-		
-	}
-/*}
-*//* Akhir Kontainer Utama Halaman Utama Desktop*/
+}
+@media only screen and (min-width: 769px) {*/
+body {
+	padding: 0;
+	margin: 0;
+	height: auto;
+	background-image: url(../images/background.png);
+}
+#main_wrapper {
+	width: 74.96339677891654%;/*1024px*/
+	min-width: 1024px;
+	margin: 10px auto;
+	overflow: hidden;
+}
+#kontainer {
+	margin-left: 25px;
+	width: 900px;/*87.8984375%*/
+	float: left;
+	position: relative;
+	height: auto;
+	background-color: #F5F5F5;
+	overflow: hidden;
+	border-radius:5px;
+	box-shadow:0px 1px 5px rgba(0,0,0,0.8);
+}
+#nav_kiri {
+	float: left;
+	width: 75px;/*5.4904831625183%*/
+	position: relative;
+	height: 608px;
+	overflow: hidden;
+	z-index: 2;
+	border-radius:5px;
+	box-shadow:1px 0px 5px rgba(0,0,0,0.8);
+	
+	background: #ffffff; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU1ZTUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+	background: linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-8 */	
+}
+#status_maker_group {
+	display:none;
+	padding-top: 5px;
+	text-align: left;
+	width: 900px;
+	height: 105px;
+	position: absolute;
+	z-index: 4;
+	background-color:#8CD7D5;
+}
+#status_maker {
+	display:none;
+	overflow:hidden;
+	margin-top:100px;
+	padding-top: 5px;
+	text-align: left;
+	width: 900px;
+	min-height: 350px;
+	position: absolute;
+	z-index: 4;
+	background:url(../images/dark.png);
+	box-shadow:0px 5px 15px rgba(0,0,0,0.9);
+}
+#konten {
+	width: 100%;
+	height: 520px;
+	padding-right: 15px;
+	padding-top: 25px;
+	z-index: 1;
+	background-color:#FFFFFF;
+}
+#footer {
+	height: auto;
+	background-color: #8CD7D5;
+	border-top: 1px solid #09F;
+	padding-bottom: 10px;
+}
+#notif_wrapper {
+	margin-left: 50px;
+	width: 320px;
+	height: 608px;
+	position: absolute;
+	background-color: rgba(0,0,0,0.99);
+	z-index: 10;
+	color: #ffffff;
+	border-radius: 3px;
+	box-shadow: 5px 0px 30px rgba(0,0,0,0.7);
+	display:none;
+}
+
+/* Akhir Kontainer Utama Halaman Utama Desktop*/
